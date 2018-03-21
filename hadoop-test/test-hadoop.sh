@@ -9,6 +9,7 @@
 
 #--------------------------------------------------------------------------
 # DRFA will allow the logs to go into the File Appender rather than Console -> System.err/out.
+
 #export HADOOP_ROOT_LOGGER=WARN,DRFA
 
 #--------------------------------------------------------------------------

@@ -1,1 +1,0 @@
-bin/hadoop jar hadoop-streaming-2.7.5.jar -mapper /home/hduser/mapper.py -reducer /home/hduser/reducer.py -input /user/hduser/gutenberg/* -output /user/hduser/gutenberg-output

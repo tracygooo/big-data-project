@@ -1,0 +1,6 @@
+Multiplying a matrix using MapReduce:
+	https://www.knowbigdata.com/blog/multiplying-matrix-using-mapreduce
+Map reduce with examples (linear regression):
+	http://datascienceguide.github.io/map-reduce
+Building linear regression with MapReduce on Hadoop:
+	https://nerdslearning.wordpress.com/2012/12/04/building-linear-regression-with-mapreduce-on-hadoop/

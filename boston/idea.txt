@@ -1,0 +1,1 @@
+1. For the calculation of XT*X, we only need to compute the elements of upper triangle, because of its symmetry
