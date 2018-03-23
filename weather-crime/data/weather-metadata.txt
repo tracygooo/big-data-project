@@ -1,0 +1,3 @@
+http://research.jisao.washington.edu/greg/canada/reference/weather_variables.html
+
+PRCP: "PRCP" means the total liquid water equivalent of presumably all precipitation. If it is not all precipitation, it is at least the combination of rain and liquid water equivalent of snow.
