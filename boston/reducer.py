@@ -5,7 +5,7 @@ import numpy as np
 from numpy.linalg import inv
 
 row = 400
-attri = 13
+attri = 14
 s = ( attri , attri )
 
 X = np.zeros( s )

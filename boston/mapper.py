@@ -11,8 +11,14 @@ row = mat.shape[ 0 ]
 # X: first 13 columns 
 X = mat[ : , :13 ]
 
+# Add last column with ones for bias (omega_0)
+X0 = np.ones( row )
+X0 = np.array( [ X0 ] )
+X = np.concatenate( ( X , X0.T ) , axis = 1 )
+
 # Y_real: 14th column (15th (last) column is ID)
 Y_real = mat[ : , 13 ]
+
 
 for i in xrange( 0 , row ):
 #for i in xrange( 0 , 1 ):
