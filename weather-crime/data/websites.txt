@@ -1,5 +1,0 @@
-Crime data:
-https://catalog.data.gov/dataset/crimes-one-year-prior-to-present-e171f#sec-dates
-
-Weather data:
-https://www.ncdc.noaa.gov/cdo-web/search
