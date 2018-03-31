@@ -1,1 +1,5 @@
 1. For the calculation of XT*X, we only need to compute the elements of upper triangle, because of its symmetry
+2. Construct training and testing scripts seperately
+	obtain weights (beta) from training scripts
+	use weights calculated from training as input, test_mapper.py will calculate individual Xi * beta
+	test_reducer.py will get metrics ()

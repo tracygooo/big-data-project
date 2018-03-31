@@ -1,0 +1,2 @@
+# Boston data training for linear regression
+/usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/hadoop-streaming-2.7.5.jar -mapper /home/hduser/big-data-project/boston/code/mapper.py -reducer /home/hduser/big-data-project/boston/code/reducer.py -input /user/hduser/boston/input/boston.pat -output /user/hduser/boston/output

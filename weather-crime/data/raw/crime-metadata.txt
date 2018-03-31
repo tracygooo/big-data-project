@@ -9,3 +9,5 @@ Ward: The ward (City Council district) where the incident occurred. See the ward
 Community Area: Indicates the community area where the incident occurred. Chicago has 77 community areas. See the community areas at https://data.cityofchicago.org/d/cauq-8yn6.
 
 FBI Code: Indicates the crime classification as outlined in the FBI's National Incident-Based Reporting System (NIBRS). See the Chicago Police Department listing of these classifications at http://gis.chicagopolice.org/clearmap_crime_sums/crime_types.html.
+
+Arrest: Indicates whether an arrest was made.
