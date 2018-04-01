@@ -3,25 +3,21 @@
 import sys
 import numpy as np
 
+# number of attributes
+attri = 13
+
 for line in sys.stdin:
     # Split line into a list
     ls = line.split()
     la = np.asarray( ls , dtype = np.float32 )
 
     # First 13 elements
-    xi = la[ 0:13:1 ]
+    x = la[ 0:attri:1 ]
 
     # 14th element
-    yi = la[ 13 ]
+    y = la[ attri ]
 
-    # Convert X[i] and Y_real[i] into 2-D array in order to apply transpose
-    xi = np.array( [xi] )
-
-    # transpose of Xi
-    xi_T = xi.T
-
-    XTX = np.matmul( xi_T , xi )
-    XTY =   xi_T * yi
-
-    print '1\t{}'.format( XTX )
-    print '2\t{}'.format( XTY )
+    for i in xrange( attri ):
+        print( '{}\t{}'.format( i , x[i] * y ) )
+        for j in xrange( attri ):
+            print( '{},{}\t{}'.format( i , j , x[i] * x[j] ) )
