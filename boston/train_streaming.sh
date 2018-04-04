@@ -17,4 +17,4 @@ stream="$hadoop_dir jar $jar_dir -mapper $mapper_dir -reducer $reducer_dir -inpu
 # execute hadoop streaming command
 eval $stream
 
-hdfs dfs -copyToLocal boston/output/part-00000 /home/hduser/big-data-project/boston/code/weights.txt
+hdfs dfs -copyToLocal boston/output/part-00000 /home/hduser/big-data-project/boston/output/weights.txt

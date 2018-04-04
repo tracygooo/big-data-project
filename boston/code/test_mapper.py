@@ -16,14 +16,19 @@ attri = 13
 #f_weight = open( '/user/hduser/boston/input/weights.txt' , 'r' )
 f_weight = open( 'weights.txt' , 'r' )
 w = np.loadtxt( f_weight )
-# w = np.array([-0.0940579058469, 0.128322469148, -0.00578034364991, 0.101799511318, -0.230212306852, 0.244139399789,  0.0182279904518, -0.342488378616, 0.278580425242,  -0.245897085046, -0.229638684728, 0.0715963743274, -0.394478860359])
 
+target_sum = 0
+predict_sum = 0
+count = 0
 
 # Open test data file
-# f_test = open( '../input/boston.tes' , 'r' )
+#f_test = open( '../input/boston.tes' , 'r' )
 
 #for line in f_test:
 for line in sys.stdin:
+    
+    # Counting number of testing instances
+    count += 1
 
     # Split line into a list
     ls = line.split()
@@ -34,9 +39,23 @@ for line in sys.stdin:
 
     # Target
     y_t = la[ attri ]
+    target_sum += y_t
 
     # Predicted response
     y_p = np.matmul( w.T , x )
+    predict_sum += y_p
 
     # Print target and prediction for reducer
     print( '{}\t{}'.format( y_t , y_p ) )
+#f_test.close()
+
+target_ave = target_sum / count
+predict_ave = predict_sum / count
+#print( '{}\t{},{}'.format( '00ave' , target_ave , predict_ave ) )
+
+#path = '/home/hduser/big-data-project/boston/code/'
+#of = open( path + 'test_ave.txt' , 'w' )
+of = open( 'test_ave.txt' , 'w' )
+of.write( '# Average of testing data: Target and Prediction\n' )
+of.write( '{}\t{}'.format( target_ave , predict_ave ) )
+of.close()

@@ -10,11 +10,12 @@ mapper_dir="/home/hduser/big-data-project/boston/code/test_mapper.py"
 reducer_dir="/home/hduser/big-data-project/boston/code/test_reducer.py"
 input_dir="/user/hduser/boston/input/boston.tes"
 output_dir="/user/hduser/boston/output"
-#file_dir="/user/hduser/boston/input/weights.txt"
-file_dir="output/weights.txt"
+filename1="output/weights.txt"
+filename2="output/test_ave.txt"
 
 # define stream command
-stream="$hadoop_dir jar $jar_dir -mapper $mapper_dir -reducer $reducer_dir -input $input_dir -output $output_dir -file $file_dir" 
+stream="$hadoop_dir jar $jar_dir -mapper $mapper_dir -reducer $reducer_dir -input $input_dir -output $output_dir -file $filename1 -file $filename2"  
+#stream="$hadoop_dir jar $jar_dir -mapper $mapper_dir -reducer $reducer_dir -input $input_dir -output $output_dir -file $filename1"  
 
 # execute hadoop streaming command
 eval $stream
