@@ -12,10 +12,10 @@ input_dir="/user/hduser/boston/input/boston.tes"
 output_dir="/user/hduser/boston/output"
 filename1="output/weights.txt"
 filename2="output/test_ave.txt"
+filename3="input/descale.txt"
 
 # define stream command
-stream="$hadoop_dir jar $jar_dir -mapper $mapper_dir -reducer $reducer_dir -input $input_dir -output $output_dir -file $filename1 -file $filename2"  
-#stream="$hadoop_dir jar $jar_dir -mapper $mapper_dir -reducer $reducer_dir -input $input_dir -output $output_dir -file $filename1"  
+stream="$hadoop_dir jar $jar_dir -mapper $mapper_dir -reducer $reducer_dir -input $input_dir -output $output_dir -file $filename1 -file $filename2 -file $filename3" 
 
 # execute hadoop streaming command
 eval $stream

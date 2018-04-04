@@ -6,17 +6,26 @@ Compute
     mean average error (MAE)
     q^2
     Q^2
+
+    For a good model, q^2 and Q^2 should be close to 0
     ...
 '''
 
 import numpy as np
 import sys
 
+# Read averages of target and predicted responses
 f_ave = open( 'test_ave.txt' , 'r' )
 ave = np.loadtxt( f_ave )
 t_ave = ave[ 0 ]
 p_ave = ave[ 1 ]
 f_ave.close()
+
+# Read standard deviation for descaling (MSE and MAE need)
+f_des = open( 'descale.txt' , 'r' )
+des_array = np.loadtxt( f_des )
+des_std = des_array[ 1 ]
+f_des.close()
 
 #------------------ Accumulate following items---------------------------
 # prediction - target
@@ -63,11 +72,13 @@ for line in sys.stdin:
 
 # Mean average error
 MAE = pt / count
+MAE = MAE * des_std
 
 # Mean square error
 MSE = pow( pt_2 / count , 0.5 )
+MSE = MSE * des_std
 
-# r^2
+# Pearson Correlation Coefficient, r^2
 r2 = pow( ppa_tta , 2 ) / ( p_pave_2 * t_tave_2 )
 
 # R^2
