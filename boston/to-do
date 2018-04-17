@@ -1,3 +1,0 @@
-Change input of mapper.py from 'loadtxt' to stdin 
-	or check whether it is possible for hadoop streaming mapper to input from text
-Ok Pay attention to matrix multiplication
