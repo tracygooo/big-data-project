@@ -1,0 +1,37 @@
+#!/usr/bin/env python
+
+#---------------------------------------------------------
+#Using weights obtained from training data, compute predicted response
+#Output target and predicted response as input of reducer
+#---------------------------------------------------------
+
+
+import numpy as np
+
+# number of attributes
+attri = 13
+
+# Read weights to array 'w'
+f_weight = open( '../output/weights.txt' , 'r' )
+w = np.loadtxt( f_weight )
+
+# Open test data file
+f_test = open( '../input/boston.tes' , 'r' )
+
+for line in f_test:
+
+    # Split line into a list
+    ls = line.split()
+    la = np.asarray( ls , dtype = np.float32 )
+
+    # First 13 elements
+    x = la[ 0:attri:1 ]
+
+    # Target
+    y_t = la[ attri ]
+
+    # Predicted response
+    y_p = np.matmul( w.T , x )
+
+    # Print target and prediction for reducer
+    print( '{}\t{}'.format( y_t , y_p ) )

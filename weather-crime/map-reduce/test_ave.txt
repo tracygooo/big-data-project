@@ -1,0 +1,2 @@
+# Average of testing data: Target and Prediction
+-0.000458717299911	0.00166880124591
