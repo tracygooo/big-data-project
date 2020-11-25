@@ -1,5 +1,6 @@
 ## General description:
 See [report](project-report.pdf)
+
 The goal of this project is to use Hadoop for linear regression. It contains four objects below:
  - hadoop-test 
  - word-count
